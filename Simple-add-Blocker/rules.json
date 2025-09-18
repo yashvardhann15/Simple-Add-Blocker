@@ -1,26 +1,58 @@
 [
-      {
-            "id": 1,
-            "priority": 1,
-            "action": {"type": "block"},
-            "condition": {"urlFilter": "*://*doubleclick.net/*"}
-      },
-      {
-            "id": 2,
-            "priority": 1,
-            "action": {"type": "block"},
-            "condition": {"urlFilter": "*://googleadservices.com/*"}
-      },
-      {
-            "id": 3,
-            "priority": 1,
-            "action": {"type": "block"},
-            "condition": {"urlFilter": "*://sin.creativecdn.com/*"}
-      },
-      {
-            "id": 4,
-            "priority": 1,
-            "action": {"type": "block"},
-            "condition": {"urlFilter": "*://pn.ybp.yahoo.com/*"}
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {"type": "block"},
+    "condition": {"urlFilter": "*://*doubleclick.net/*"}
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {"type": "block"},
+    "condition": {"urlFilter": "*://googleadservices.com/*"}
+  },
+  {
+    "id": 3,
+    "priority": 1,
+    "action": {"type": "block"},
+    "condition": {"urlFilter": "*://sin.creativecdn.com/*"}
+  },
+  {
+    "id": 4,
+    "priority": 1,
+    "action": {"type": "block"},
+    "condition": {"urlFilter": "*://pn.ybp.yahoo.com/*"}
+  },
+  {
+    "id": 5,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "host": "yout-ube.com"
+        }
       }
+    },
+    "condition": {
+      "urlFilter": "*://www.youtube.com/watch*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 6,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "host": "yout-ube.com"
+        }
+      }
+    },
+    "condition": {
+      "urlFilter": "*://youtube.com/watch*",
+      "resourceTypes": ["main_frame"]
+    }
+  }
 ]
