@@ -2,26 +2,26 @@
   {
     "id": 1,
     "priority": 1,
-    "action": {"type": "block"},
-    "condition": {"urlFilter": "*://*doubleclick.net/*"}
+    "action": { "type": "block" },
+    "condition": { "urlFilter": "*://*doubleclick.net/*" }
   },
   {
     "id": 2,
     "priority": 1,
-    "action": {"type": "block"},
-    "condition": {"urlFilter": "*://googleadservices.com/*"}
+    "action": { "type": "block" },
+    "condition": { "urlFilter": "*://googleadservices.com/*" }
   },
   {
     "id": 3,
     "priority": 1,
-    "action": {"type": "block"},
-    "condition": {"urlFilter": "*://sin.creativecdn.com/*"}
+    "action": { "type": "block" },
+    "condition": { "urlFilter": "*://sin.creativecdn.com/*" }
   },
   {
     "id": 4,
     "priority": 1,
-    "action": {"type": "block"},
-    "condition": {"urlFilter": "*://pn.ybp.yahoo.com/*"}
+    "action": { "type": "block" },
+    "condition": { "urlFilter": "*://pn.ybp.yahoo.com/*" }
   },
   {
     "id": 5,
@@ -30,7 +30,7 @@
       "type": "redirect",
       "redirect": {
         "transform": {
-          "host": "yout-ube.com"
+          "host": "www.youtube.com."
         }
       }
     },
@@ -46,12 +46,28 @@
       "type": "redirect",
       "redirect": {
         "transform": {
-          "host": "yout-ube.com"
+          "host": "youtube.com."
         }
       }
     },
     "condition": {
       "urlFilter": "*://youtube.com/watch*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 7,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "host": "ssyoutube.com"
+        }
+      }
+    },
+    "condition": {
+      "urlFilter": "*://*.youtube.com/*&download=1*",
       "resourceTypes": ["main_frame"]
     }
   }
