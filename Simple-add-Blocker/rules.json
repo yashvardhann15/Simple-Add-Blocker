@@ -24,47 +24,11 @@
     "condition": { "urlFilter": "*://pn.ybp.yahoo.com/*" }
   },
   {
-    "id": 5,
-    "priority": 1,
-    "action": {
-      "type": "redirect",
-      "redirect": {
-        "transform": {
-          "host": "www.youtube.com."
-        }
-      }
-    },
-    "condition": {
-      "urlFilter": "*://www.youtube.com/watch*",
-      "resourceTypes": ["main_frame"]
-    }
-  },
-  {
-    "id": 6,
-    "priority": 1,
-    "action": {
-      "type": "redirect",
-      "redirect": {
-        "transform": {
-          "host": "youtube.com."
-        }
-      }
-    },
-    "condition": {
-      "urlFilter": "*://youtube.com/watch*",
-      "resourceTypes": ["main_frame"]
-    }
-  },
-  {
     "id": 7,
     "priority": 2,
     "action": {
       "type": "redirect",
-      "redirect": {
-        "transform": {
-          "host": "ssyoutube.com"
-        }
-      }
+      "redirect": { "transform": { "host": "ssyoutube.com" } }
     },
     "condition": {
       "urlFilter": "*://*.youtube.com/*&download=1*",

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Speed Controller</title>
+    <link rel="stylesheet" href="popup.css" />
+    <script src="popup.js"></script>
+    <style>
+        /* Extra style for the download button */
+        .download-section {
+            margin-bottom: 15px;
+            padding: 0 20px;
+        }
+        #download-btn {
+            width: 100%;
+            background-color: #4CAF50; /* Green */
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        #download-btn:hover {
+            background-color: #45a049;
+        }
+        #download-btn svg {
+            fill: currentColor;
+        }
+    </style>
+</head>
+<body>
+<div class="popup-container">
+    <div class="speed-section">
+        <div class="speed-controls">
+            <button id="speed-decrease" class="control-btn" data-delta="-0.1"><span>-0.1</span></button>
+            <button id="speed-reset" class="control-btn reset-btn">1.0</button>
+            <button id="speed-increase" class="control-btn" data-delta="0.1"><span>+0.1</span></button>
+        </div>
+
+        <div class="download-section">
+            <button id="download-btn">
+                <svg viewBox="0 0 24 24" width="18" height="18">
+                    <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                </svg>
+                Copy URL & Download
+            </button>
+        </div>
+
+        <div class="speed-presets">
+            <div class="preset-grid">
+                <button class="preset-btn" data-speed="0.5">0.5</button>
+                <button class="preset-btn" data-speed="1.0">1</button>
+                <button class="preset-btn" data-speed="1.5">1.5</button>
+                <button class="preset-btn" data-speed="2.0">2</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div id="status" class="status hide"></div>
+        <div class="footer-controls">
+            <button id="disable" class="icon-btn power-btn" title="Toggle">Pwr</button>
+            <button id="config" class="icon-btn settings-btn" title="Settings">Set</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
